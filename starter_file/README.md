@@ -19,7 +19,7 @@ In this project we will choose a public external dataset. This dataset will be u
 ## Dataset
 Dataset [Student's Scores](https://www.kaggle.com/datasets/samarsaeedkhan/scores) from kaggle
 
-![Dataset details](/capture/dataset.PNG)
+![Dataset details](./capture/dataset.PNG)
 
 ### Overview
 This dataset contains the marks of students in percentage and the subjects are ML, Excel, Python, Tableau and SQL.
