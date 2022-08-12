@@ -90,8 +90,8 @@ automl_config = AutoMLConfig(compute_target=compute_target,
 
 
 #### Result Capture
-![RunDetails](/capture/RunDetails.PNG)
-![Bestrun](/capture/BestModel.PNG)
+![RunDetails](./capture/RunDetails.PNG)
+![Bestrun](./capture/BestModel.PNG)
 
 ## Improve:
 I think i can improvements to have have best result: 
@@ -138,8 +138,8 @@ hyperdrive_run_config = HyperDriveConfig(
 4. Max Iterations: 200
 
 #### Result Capture
-![RunDetails](/capture/HP_RunDetails.PNG)
-![Bestrun](/capture/HP_BestModel.PNG)
+![RunDetails](./capture/HP_RunDetails.PNG)
+![Bestrun](./capture/HP_BestModel.PNG)
 
 ## Model Deployment
 1. inference_config:
