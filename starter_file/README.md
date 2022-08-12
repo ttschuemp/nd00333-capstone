@@ -93,7 +93,7 @@ automl_config = AutoMLConfig(compute_target=compute_target,
 ![RunDetails](./capture/RunDetails.PNG)
 ![Bestrun](./capture/BestModel.PNG)
 
-## Improve:
+### Improve:
 I think i can improvements to have have best result: 
 1) Set bigger ```n_cross_validation``` to 6 or 7. 
 2) Increase ``` "experiment_timeout_minutes": 20 ``` to 40mins to 1 hour. 
@@ -112,11 +112,20 @@ param_sampling = RandomParameterSampling(
     }
 )
 ```
+- C : The inverse of the reqularization strength. The smaller the number the stronger the regularization.
+
+- max_iter : Maximum number of iterations to converge.
+
 
 2. BanditPolicy:
+The BanditPolicy which is an early stopping policy with the meaning that cuts more runs than a conservative one
 ```
 early_termination_policy = BanditPolicy(slack_factor = 0.1, evaluation_interval = 2, delay_evaluation = 5)
 ```
+- slack_factor: The ratio used to calculate the allowed distance from the best performing experiment run.
+- evaluation_interval: The frequency for applying the policy.
+- delay_evaluation: The number of intervals for which to delay the first policy evaluation. If specified, the policy applies every multiple of evaluation_interval that is greater than or equal to delay_evaluation.
+
 3. HyperDriveConfig:
 ```
 hyperdrive_run_config = HyperDriveConfig(
@@ -129,13 +138,26 @@ hyperdrive_run_config = HyperDriveConfig(
     max_concurrent_runs=8,
 )
 ```
-   
+- primary_metric_name='Accuracy' : Meaning that our interest is about the 'Accuracy'.
+
+- primary_metric_goal=PrimaryMetricGoal.MAXIMIZE: Meaning that we want to Maximize the primary metric and not minimize it for example.
+
+- policy=early_termination_policy : This is where I have set the policy I described above.
+
+- max_concurrent_runs=8 : Maximum number of runs to run concurrently. Of course the best is 4 as it is the number of cluster nodes.
+
+- max_total_runs=16 : Maximum number of runs. This is the upper bound, there may be fewer runs when the sample space is smaller than this value.
 
 ### Results
 1. runId: HD_b3dd28f6-e77a-4f79-9648-66296c405f66_6
 2. Accuracy: 0.5666666666666667
 3. Regularization: 1000.0
 4. Max Iterations: 200
+
+### Compare
+The results from of accuracy between the Hyperdrive and the AutoML are the same:
+1) Set as ```max_total_runs``` a much more big number.
+2) Make more choice options for ParameterSampling with ``` C ``` and ``` max_iter ```. 
 
 #### Result Capture
 ![RunDetails](./capture/HP_RunDetails.PNG)
