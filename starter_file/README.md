@@ -159,8 +159,8 @@ aciconfig = AciWebservice.deploy_configuration(cpu_cores = 2,
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
 
-1. ![Automated ML](https://youtu.be/J_kjNjIY9-w)
-2. ![Hyperparameter Tuning](https://youtu.be/lZoYIvS8jPI)
+1. [Automated ML](https://youtu.be/J_kjNjIY9-w)
+2. [Hyperparameter Tuning](https://youtu.be/lZoYIvS8jPI)
 
 ## Standout Suggestions
 - I have to try get best run with Hyperparameter Tuning but cannot get file output.pkl
