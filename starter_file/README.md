@@ -51,16 +51,38 @@ Best model detaisl with params:
 <img width="1095" alt="Screenshot 2023-11-15 at 16 56 31" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/7862fae6-f232-4383-9380-92cd016c2443">
 
 
-
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
+
+I used a Gradient Boosting Classifier. One compelling argument for the effectiveness of the Gradient Boosting Classifier is its ability to handle complex relationships within the data. This model, through its ensemble of weak learners (typically decision trees), sequentially corrects errors made by preceding models. This iterative learning process allows Gradient Boosting to capture intricate patterns and dependencies in the data, making it particularly powerful for tasks where the relationships are non-linear and exhibit a high degree of complexity. 
+
+Learning Rate Variation:
+
+By default, the learning rate is set to 0.1. However, for flexibility and optimization, we introduce variability by allowing a uniform distribution between 0.1 and 0.5 as a parameterization option.
+Number of Base Estimators (n_estimators):
+
+In the Gradient Boosting modeling process, the parameter n_estimators determines the count of base estimators, typically represented by decision trees. To cater to different scenarios, we provide a list of options for this parameter, allowing selection from values such as 100, 200, 300, and 350.
 
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+The model had an `accuracy of 84%`. The parameter setting that HyperDrive found is: `['earning_rate', '0.29', 'n_estimators', '100']`.
 
+To improve the model we could increase the paramenter space for HyperDrive to search in so for example > 350 estimators might be even better. Another option is to tune even more hyperparameters of the model.
+
+Screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+
+<img width="1088" alt="Screenshot 2023-11-19 at 13 34 55" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/28667a90-318d-46a2-b19b-2e3cd3aa0317">
+<img width="1161" alt="Screenshot 2023-11-19 at 13 35 03" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/8f33ac8c-860b-434c-9dd6-daae313fc94e">
+
+ Best model trained with it's parameters
+
+ 
+<img width="1155" alt="Screenshot 2023-11-19 at 13 36 16" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/1f04ed38-46c5-40fc-8e38-3b2ec0ea1d58">
+
+
+ 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
