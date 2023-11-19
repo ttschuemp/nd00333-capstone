@@ -84,13 +84,22 @@ Screenshots of the `RunDetails` widget as well as a screenshot of the best model
 
  
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+
+Screenshot of the best model deployment: 
+
+<img width="825" alt="Screenshot 2023-11-19 at 14 06 44" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/41ca2d33-191e-414f-b9bd-1ed5514c3b88">
+
+Then I tested with 5 random datapoints the endpoint: 
+<img width="729" alt="Screenshot 2023-11-19 at 14 11 55" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/8dafd072-4ab2-4290-968a-cc8f2e8f3982">
+
+Here the output of the endpoint:
+<img width="962" alt="Screenshot 2023-11-19 at 14 12 11" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/373b83f0-b93f-43fb-98f0-03b8508617b0">
+
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
+
+https://youtu.be/BNxMxUqidCg
+
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
