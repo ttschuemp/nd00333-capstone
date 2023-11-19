@@ -1,25 +1,26 @@
 import os
-import json
-import numpy as np
+import joblib
 import pandas as pd
-import lightgbm as lgb
+import json
+import logging
 
 
 def init():
-    global bst
-    model_root = os.getenv("AZUREML_MODEL_DIR")
-    # The name of the folder in which to look for LightGBM model files
-    #lgbm_model_folder = "model"
-    lgbm_model_folder = "user_logs"
-    bst = lgb.Booster(
-        model_file=os.path.join(model_root, lgbm_model_folder, "bst-model.txt")
-    )
+  global model
+  model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'model.joblib')
+  try:
+    print("Loading model from path.")
+    model = joblib.load(model_path)
+    print("Loading successful.")
+  except Exception as e:
+    print(f"exception: {e}")
+    raise
+  
+  assert model is not None, f"Model not loaded: {model}"
 
-
-def run(raw_data):
-    columns = bst.feature_name()
-    data = np.array(json.loads(raw_data)["data"])
-    test_df = pd.DataFrame(data=data, columns=columns)
-    # Make prediction
-    out = bst.predict(test_df)
-    return out.tolist()
+def run(raw_data_payload):
+  # load data from payload
+  data = pd.DataFrame(json.loads(raw_data_payload))
+  # make predictions on the data
+  predictions = model.predict(data)
+  return predictions.tolist()
