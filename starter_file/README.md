@@ -88,6 +88,11 @@ In this screenshot on how to register the model such that it can be used in the 
 
 <img width="825" alt="Screenshot 2023-11-19 at 14 06 44" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/41ca2d33-191e-414f-b9bd-1ed5514c3b88">
 
+This is how you deploy the model to an enpoint. And as you can see in the logs its successfully deployed. Make sure to first create your environment with the requirements.txt file.
+<img width="906" alt="Screenshot 2023-11-20 at 14 56 16" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/827c7ddc-b6b5-4214-a7ca-8868ae75c09a">
+
+
+
 Then we take 5 random sample of the dataset to test our deployed model and see what prediction we would get from it. 
 <img width="729" alt="Screenshot 2023-11-19 at 14 11 55" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/8dafd072-4ab2-4290-968a-cc8f2e8f3982">
 
