@@ -42,12 +42,11 @@ These settings and configurations collectively define the parameters for running
 ### Results
 The best model was a VotingEnsemble model with an accuracy of 85%.
 <img width="1413" alt="Screenshot 2023-11-13 at 13 55 04" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/7aa1f322-649b-4aab-9b3d-62930bd224fa">
-Run details: 
+Run details: show all models that AutoML tried in the process of finding the best model and shows you the best model based on the primary metric chosen int the config file.  
 <img width="1191" alt="Screenshot 2023-11-13 at 13 44 13" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/4606a0db-f2ed-4a5b-853b-9bc59fa33461">
 
-<img width="1191" alt="Screenshot 2023-11-13 at 13 44 13" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/09582c2f-36fa-4282-9edc-9cf44bb67f86">
 
-Best model detaisl with params:
+Best model detail with params shows a detailed info of the model and the chosen parameters of that model to reach the performance described: 
 <img width="1095" alt="Screenshot 2023-11-15 at 16 56 31" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/7862fae6-f232-4383-9380-92cd016c2443">
 
 
@@ -76,7 +75,7 @@ Screenshots of the `RunDetails` widget as well as a screenshot of the best model
 <img width="1088" alt="Screenshot 2023-11-19 at 13 34 55" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/28667a90-318d-46a2-b19b-2e3cd3aa0317">
 <img width="1161" alt="Screenshot 2023-11-19 at 13 35 03" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/8f33ac8c-860b-434c-9dd6-daae313fc94e">
 
- Best model trained with it's parameters
+ Best model trained with it's parameters. Here we can see what kind of parameter were found by the HyperDrive algorithm to have the best possible model: 
 
  
 <img width="1155" alt="Screenshot 2023-11-19 at 13 36 16" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/1f04ed38-46c5-40fc-8e38-3b2ec0ea1d58">
@@ -85,14 +84,14 @@ Screenshots of the `RunDetails` widget as well as a screenshot of the best model
  
 ## Model Deployment
 
-Screenshot of the best model deployment: 
+In this screenshot on how to register the model such that it can be used in the future with all its predictive power. 
 
 <img width="825" alt="Screenshot 2023-11-19 at 14 06 44" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/41ca2d33-191e-414f-b9bd-1ed5514c3b88">
 
-Then I tested with 5 random datapoints the endpoint: 
+Then we take 5 random sample of the dataset to test our deployed model and see what prediction we would get from it. 
 <img width="729" alt="Screenshot 2023-11-19 at 14 11 55" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/8dafd072-4ab2-4290-968a-cc8f2e8f3982">
 
-Here the output of the endpoint:
+This is how you can test the endpoint if its working and what kind of respons you get for the 5 random data samples. The output looks valid. We don't get any error just predictions for each sample that are 0 or 1. 
 <img width="962" alt="Screenshot 2023-11-19 at 14 12 11" src="https://github.com/ttschuemp/nd00333-capstone/assets/46277840/373b83f0-b93f-43fb-98f0-03b8508617b0">
 
 
